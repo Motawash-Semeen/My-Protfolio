@@ -14,8 +14,15 @@
     <!--========== SWIPER CSS ==========-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
+    <!-- ==========AOS JS========== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!--========== MAIN CSS ==========-->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--========== LOGO ==========-->
+
+    <link rel="icon" href="assets/img/LOGO.png">
 
     <title>Motawash Semeen</title>
 </head>
@@ -69,7 +76,9 @@
         <!--===== Home =====-->
         <section class="home" id="home">
             <div class="home_container container grid">
-                <div class="home_social">
+                <div class="home_social" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
                     <div class="home_social-follow">Follow Me</div>
                     <div class="home_social-links">
                         <a href="https://www.facebook.com/tonmoy.student/" target="_blank" class="home_social-link">
@@ -83,21 +92,28 @@
                          </a>
                     </div>
                 </div>
-                <img src="assets/img/home-img.png" alt="" class="home_img">
+                <!-- <img src="assets/img/home-img.png" alt="" class="home_img"> -->
 
                 <div class="home_data">
-                    <h1 class="home_title">
-                        Hi, I'm MS Chowdhury
+                    <h1 class="home_title" data-aos="zoom-in-left" data-aos-duration="1500">
+                       <span>Hi,</span> I'm MS Chowdhury
                     </h1>
-                    <h3 class="home_subtitle">
+                    <h3 class="home_subtitle" data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="2000"
+                    data-aos-offset="0">
                         Frontend Developer
                     </h3>
-                    <p class="home_description">
+                    <p class="home_description" data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="2000"
+                    data-aos-offset="0">
                         High level experience in web design and development knowledge, producing quality website.
                     </p>
-                    <a href="#about" class="button">
+                    <a href="#about" class="button" data-aos="zoom-in-right" data-aos-duration="1500">
                         <i class="uil uil-user button_icon"></i>More About Me
                     </a>
+                    
                 </div>
                 <div class="my_info">
                     <a href="https://www.linkedin.com/in/motawash-semeen-chowdhury/" class="info_item" target="_blank">
@@ -143,7 +159,7 @@
                 About Me
             </h2>
             <div class="about_container container grid">
-                <img src="assets/img/about-img.jpg" alt="" class="about_img">
+                <img src="assets/img/my_project.jpg" alt="" class="about_img">
                 <div class="about_data">
                     <h3 class="about_heading">Hi, I,m Motawash Semeen, Based in Bangladesh</h3>
                     <p class="about_description">Web developer, with extensive knowledge and years of experience, working in the web technologies and UI/UX design, developing quality work.</p>
@@ -743,10 +759,10 @@
                         <p class="testimonial_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dolorem cum vitae.</p>
                         <h3 class="testimonial_date">March 27, 2020</h3>
                         <div class="testimonial_profile">
-                            <img src="assets/img/client1.jpg" alt="" class="testimonial_profile-img">
+                            <img src="assets/img/client.jpg" alt="" class="testimonial_profile-img">
                             <div class="testimonial_profile-data">
-                                <span class="testimonial_profile-name">Lee Doe</span>
-                                <span class="testimonial_profile-detail">Directio of a company</span>
+                                <span class="testimonial_profile-name">Ferdousur Rahman</span>
+                                <span class="testimonial_profile-detail">Owner of Appilix Softwares</span>
                             </div>
                         </div>
                     </div>
@@ -804,7 +820,7 @@
                             <i class="uil uil-whatsapp contact_card-icon"></i>
                             <h3 class="contact_card-title">Whatsapp</h3>
                                 <span class="contact_card-data">
-                                    +1232142342
+                                    01537249009
                                 </span>
                                 <a href="http://wasap.my/+8801537249009" target="_blank" class="contact_button">
                                     Write me <i class="uil uil-arrow-right contact_button-icon"></i>
@@ -815,7 +831,7 @@
                             
                             <h3 class="contact_card-title">LinkedIn</h3>
                                 <span class="contact_card-data">
-                                    user.fb1234
+                                    motawash-semeen
                                 </span>
                                 <a href="https://www.linkedin.com/in/motawash-semeen-chowdhury/" class="contact_button" target="_blank">
                                     Conatct with me <i class="uil uil-arrow-right contact_button-icon"></i>
@@ -826,22 +842,22 @@
                 <div class="contact_content">
                     <form action="" class="contact_form">
                         <div class="input_container">
-                            <input type="text" class="input">
+                            <input type="text" class="input" name="userName" required>
                         <label for="">Username</label>
                         <span>Username</span>
                         </div>                        
                         <div class="input_container">
-                            <input type="email" class="input">
+                            <input type="email" class="input" name="email" required>
                         <label for="">Email</label>
                         <span>Email</span>
                         </div>                        
                         <div class="input_container">
-                            <input type="tel" class="input">
+                            <input type="tel" class="input" name="phone" required>
                         <label for="">Phone</label>
                         <span>Phone</span>
                         </div>                        
                         <div class="input_container textarea">
-                            <textarea name="" id="" class="input"></textarea>
+                            <textarea name="" id="" class="input" name="message" required></textarea>
                         <label for="">Message</label>
                         <span>Message</span>
                         </div>  
@@ -876,7 +892,7 @@
                         <a href="#facebook" target="_blank" class="footer_social">
                             <i class="uil uil-facebook-f"></i> 
                          </a>
-                         <a href="#instra" target="_blank" class="footer_social">
+                         <a href="#instra" target="_blank" class="footer_social margin">
                              <i class="uil uil-instagram"></i> 
                          </a>
                          <a href="#twitter" target="_blank" class="footer_social">
@@ -884,6 +900,7 @@
                          </a>
                     </div>
                 </div>
+                <hr class="hr">
                 <p class="footer_copy">&#169; MS Chowdhury. All righter reserved</p>
             </div>
         </footer>
@@ -894,6 +911,9 @@
 
     <!--========== MIXITUP FILTER ==========-->
     <script src="assets/js/mixitup.min.js"></script>
+
+    <!-- ==========AOS JS========== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!--========== SWIPER JS ==========-->
     <script src="assets/js/swiper-bundle.min.js"></script>

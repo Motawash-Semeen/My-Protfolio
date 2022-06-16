@@ -175,3 +175,4 @@ function navHighlighter()
 }
 
 /*=============== SHOW SCROLL UP ===============*/
+AOS.init();
